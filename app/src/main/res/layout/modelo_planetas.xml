@@ -7,12 +7,13 @@
         android:id="@+id/idCardModelo"
         android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:backgroundTint="#1C1C1C"
         >
 
         <ImageView
             android:id="@+id/imgModeloPlaneta"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_gravity="center|left"
             android:scaleType="centerCrop"
             android:src="@drawable/terra" />
@@ -24,9 +25,9 @@
             android:layout_gravity="center"
             android:layout_marginLeft="30sp"
             android:text="Terra"
-            android:textColor="#000"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:textStyle="italic"/>
 
     </androidx.cardview.widget.CardView>
 
