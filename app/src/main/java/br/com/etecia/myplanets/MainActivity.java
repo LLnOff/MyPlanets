@@ -3,9 +3,11 @@ package br.com.etecia.myplanets;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -28,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
         listplaneta = findViewById(R.id.idListaPlanetas);
         MyAdapter adapter = new MyAdapter();
         listplaneta.setAdapter(adapter);
+
+        listplaneta.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(),MostraPlanetaActivity.class);
+
+                //implementando o putExtra
+                intent.putExtra("nomePlaneta",nomePlanetas[position]);
+                intent.putExtra("imagemPlaneta",imagemPlanetas[position]);
+
+                startActivity(intent);
+            }
+        });
 
     }
 
